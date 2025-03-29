@@ -1,0 +1,61 @@
+<!-- chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediGen-Your Smart Healthcare Companion</title>
+    <link rel="stylesheet" href="./css/chatbot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="pop-up">
+            <h3>What would you like MediGen chatbot to call you ?</h3>
+            <form id="name-getting">
+                <label for="name"></label>
+                <input id="name" type="text">
+                <button id="button" type="submit">Enter</button>
+            </form>
+        </div>
+        <section id="main">
+            <div class="chat">
+                <div class="chat-top">
+                    <div class="logo">
+                        <img id="logo" src="./imgs/Medi_final.png"> 
+                    </div>
+                    <div class="chat-buttons">
+                    <div class="new-chat">
+                        <button id="new-chat">New Chat</button>
+                    </div>
+                    <div class="new-chat">
+                        <button id="History">History</button>
+                    </div>
+                </div>
+                </div>
+                <div class="chatting">
+                </div>
+                <div class="chat-bottom">
+                    <div class="input">
+                    <label for="user-input"></label>
+                    <input type="text" id="user-input" placeholder="Enter your message here">
+                    </div>
+                    <button id="send-button">
+                        <img src="./imgs/send.png" id="send-img">
+                    </button>
+                
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="./js/chatbot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+</body>
+
+</html>

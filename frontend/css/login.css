@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "biorhyme";
+   color: #404040;
+
+}
+
+/* ---------------- HEADER -------------------------- */
+#logo {
+    height: 110px;
+    width: 225px;
+}
+--------------------MAIN------------------------------- */
+body {
+    background-color: #FAFAFA ;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------- CONTAINER -------------------- */
+.container {
+    height: 500px;
+    width: 900px;
+    background-color: #fae19d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 50px auto; /* Center horizontally */
+}
+
+/* -------- Login/Register Wrapper -------- */
+.login-container {
+    width: 450px;
+    padding: 40px;
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+}
+
+/* ---- Sliding Effect ---- */
+#login-section {
+    left: 40px;
+    transform: translateX(0);
+}
+
+#register-section {
+    left: 40px;
+    transform: translateX(100%);
+}
+
+.show-register #login-section {
+    transform: translateX(-100%);
+}
+
+.show-register #register-section {
+    transform: translateX(0);
+}
+
+/* -------- Form Elements -------- */
+.form-element {
+    margin: 15px 0;
+}
+
+.form-element label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-element input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(255, 100, 120);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: rgb(255, 50, 80);
+}
+
+/* -------- Switch Text -------- */
+.switch-text {
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: rgb(255, 100, 120);
+    font-size: 14px;
+}
+
+.switch-text:hover {
+    text-decoration: underline;
+}
+
+/* -------- GIF Positioning -------- */
+.login-gif {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex; /* Ensures it takes full space */
+    align-items: flex-end; /* Aligns it properly */
+}
+
+#gif {
+    height: 500px;
+    width: 400px;
+    display: block; /* Removes extra inline spacing */
+}

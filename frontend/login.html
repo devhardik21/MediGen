@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediGen - Your Healthcare Companion</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img id="logo" src="./imgs/Medi_final.png">
+        </div>
+    </header>
+
+    <div class="wrapper"> 
+        <div class="container" id="login-register-container">
+            
+            <!-- LOGIN SECTION -->
+            <div class="login-container" id="login-section">
+                <h2>Login</h2>
+                <form id="login">
+                    <div class="form-element">
+                        <label for="email-id">Email</label>
+                        <input id="email-id" type="text">
+                    </div>
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input id="password" type="password">
+                    </div>
+                    <button type="submit" id="login-button">Login</button>
+                    <p class="switch-text" onclick="toggleForms()">Don't have an account? Register</p>
+                </form>
+            </div>
+
+            <!-- REGISTER SECTION -->
+            <div class="login-container" id="register-section">
+                <h2>Register</h2>
+                <form id="register">
+                    <div class="form-element">
+                        <label for="Username">Username</label>
+                        <input id="Username" type="text">
+                    </div>
+                    <div class="form-element">
+                        <label for="Dob">DOB</label>
+                        <input id="Dob" type="date">
+                    </div>
+                    <div class="form-element">
+                        <label for="email-id-register">Email</label>
+                        <input id="email-id-register" type="text">
+                    </div>
+                    <div class="form-element">
+                        <label for="password-register">Password</label>
+                        <input id="password-register" type="password">
+                    </div>
+                    <button type="submit" id="register-button">Register</button>
+                    <p class="switch-text" onclick="toggleForms()">Already have an account? Login</p>
+                </form>
+            </div>
+
+            <!-- GIF -->
+            <div class="login-gif">
+                <img src="./imgs/medical_gif.gif" alt="can't display" id="gif">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/sliding.js"></script>
+    <script src="./js/connection.js"></script>
+
+</body>
+</html>

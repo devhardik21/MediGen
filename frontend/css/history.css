@@ -67,3 +67,41 @@ h1 {
     background-color: rgb(131, 131, 255);
     color: white;
 }
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    #logo {
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #history {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .bot-message, .user-message {
+        font-size: 14px;
+        padding: 12px;
+        max-width: 90%;
+    }
+
+    .bot-message {
+        border-radius: 10px;
+    }
+
+    .user-message {
+        border-radius: 10px;
+    }
+}

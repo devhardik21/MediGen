@@ -176,3 +176,80 @@ a:hover {
     100% { transform: rotate(360deg); }
 }
 
+/* Mobile (Max 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Header */
+    header {
+        padding: 10px;
+    }
+
+    #logo {
+        height: 80px;
+        margin-left: 10px;
+    }
+
+    /* Details Section */
+    #details {
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+
+    #details h2 {
+        font-size: 22px;
+    }
+
+    #details p {
+        font-size: 16px;
+    }
+
+    /* Search Section */
+    #searching-section {
+        padding: 10px;
+    }
+
+    #price-search {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #search {
+        width: 100%;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    /* Price Display */
+    #price-display {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-container {
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    /* Medicine Details */
+    .medicine p {
+        font-size: 14px;
+    }
+
+    /* Loader */
+    .loader-container {
+        margin: 10px auto;
+    }
+
+    .loader {
+        width: 35px;
+        height: 35px;
+    }
+}
+

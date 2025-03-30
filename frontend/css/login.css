@@ -12,7 +12,7 @@
     height: 110px;
     width: 225px;
 }
---------------------MAIN------------------------------- */
+/*--------------------MAIN------------------------------- */
 body {
     background-color: #FAFAFA ;
     height: 100vh;
@@ -128,3 +128,63 @@ button:hover {
     width: 400px;
     display: block; /* Removes extra inline spacing */
 }
+
+/* Existing styles remain unchanged */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .login-container {
+        width: 100%;
+        position: relative;
+    }
+    #login-section, #register-section {
+        left: 0;
+        width: 100%;
+        transform: translateX(0);
+    }
+    .show-register #login-section {
+        display: none;
+    }
+    .show-register #register-section {
+        display: block;
+    }
+    .login-gif {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    #gif {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    .form-element input {
+        padding: 10px;
+    }
+    button {
+        padding: 12px;
+    }
+    .switch-text {
+        font-size: 12px;
+    }
+    #logo {
+        height: 80px;
+        width: 180px;
+    }
+}
+

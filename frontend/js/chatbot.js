@@ -1,7 +1,7 @@
 //chatbot.js
 console.log("1");
 let username;
-const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL = 'https://medigen-ocp5.onrender.com/api';
 const nameInput = document.getElementById('name');
 const nameForm = document.getElementById('name-getting');
 const button = document.querySelector('#send-button');

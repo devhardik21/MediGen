@@ -1,5 +1,5 @@
 const historyContainer = document.querySelector('#history');
-const BASE_URL = `http://localhost:8000/api`;
+const BASE_URL = `https://medigen-ocp5.onrender.com/api`;
 const token = sessionStorage.getItem("token");
 
 document.addEventListener("DOMContentLoaded", async () => {

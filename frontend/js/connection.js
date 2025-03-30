@@ -1,5 +1,5 @@
 //connection between frontend and backend
-const BASE_URL = 'http://localhost:8000/api' ; 
+const BASE_URL = 'https://medigen-ocp5.onrender.com/api' ; 
 const reg_submit = document.querySelector('#register-button') ; 
 const log_submit = document.querySelector('#login-button') ; 
 const reg_form = document.querySelector('#register') ; 

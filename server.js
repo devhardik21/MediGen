@@ -19,13 +19,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Use CORS with specific origin and credentials enabled
-app.use(cors(
-   { origin : true,
-    credentials : true,
+app.use(cors({
+    origin: "https://medi-gen-2tnn.vercel.app", // Your deployed frontend URL
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie']
-} 
-));
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 // Other middleware
 app.use(express.json());

@@ -1,7 +1,15 @@
 import puppeteer from "puppeteer";
 
+const launchBrowser = async () => {
+    return await puppeteer.launch({
+        headless: "new",
+        executablePath: process.env.CHROME_BIN || '/opt/render/.cache/puppeteer/chrome/linux-134.0.6998.35/chrome',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
+};
+
 const scrapeApollo = async (medicine) => {
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await launchBrowser();
     const page = await browser.newPage();
     await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
 
@@ -19,7 +27,6 @@ const scrapeApollo = async (medicine) => {
                         name: text.find(t => t.length > 3 && !t.includes("₹") && !t.includes("%")) || "N/A",
                         mrp: text.find(t => t.includes("MRP ₹"))?.replace("MRP ₹", "").trim() || "N/A",
                         price: text.find(t => t.includes("₹") && !t.includes("MRP") && !t.includes("cashback")) || "N/A",
-                    
                     };
                 });
         });
@@ -31,7 +38,7 @@ const scrapeApollo = async (medicine) => {
 };
 
 const scrapePharmEasy = async (medicine) => {
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await launchBrowser();
     const page = await browser.newPage();
     await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
 
@@ -49,7 +56,6 @@ const scrapePharmEasy = async (medicine) => {
                         name: text[0] || "N/A",
                         mrp: text.find(t => t.includes("MRP ₹"))?.replace("MRP ", "") || "N/A",
                         price: text.find(t => t.includes("₹") && !t.includes("MRP") && !t.includes("cashback")) || "N/A",
-                     
                     };
                 });
         });
@@ -61,7 +67,7 @@ const scrapePharmEasy = async (medicine) => {
 };
 
 const scrapeNetmeds = async (medicine) => {
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await launchBrowser();
     const page = await browser.newPage();
     await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
 
@@ -82,7 +88,6 @@ const scrapeNetmeds = async (medicine) => {
                         name: nameEl ? nameEl.innerText.trim() : "N/A",
                         price: priceEl ? priceEl.innerText.trim() : "N/A",
                         mrp: mrpEl ? mrpEl.innerText.trim().replace("MRP ₹", "") : "N/A",
-                      
                     };
                 });
         });
@@ -93,6 +98,6 @@ const scrapeNetmeds = async (medicine) => {
     return { site: "Netmeds", data: result };
 };
 
-export {scrapeApollo} ; 
-export {scrapeNetmeds} ; 
-export {scrapePharmEasy} ; 
+export { scrapeApollo };
+export { scrapeNetmeds };
+export { scrapePharmEasy };

@@ -5,7 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules server.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules server.js",
+    "postinstall": "npx puppeteer browsers install chrome"
+    
   },
   "keywords": [
     "js",

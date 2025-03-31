@@ -163,8 +163,8 @@ const scrapePage = async (url, userAgent, evaluationFunction, waitForSelector, t
       timeout: timeout 
     });
     
-    // Add a small delay to let dynamic content load
-    await page.waitForTimeout(2000);
+    // Add a small delay to let dynamic content load - using setTimeout instead of waitForTimeout
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     // Wait for the specific selector with timeout
     if (waitForSelector) {

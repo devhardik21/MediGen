@@ -3,8 +3,13 @@ import puppeteer from "puppeteer";
 const launchBrowser = async () => {
     return await puppeteer.launch({
         headless: "new",
-        executablePath: process.env.CHROME_BIN || '/opt/render/.cache/puppeteer/chrome/linux-134.0.6998.35/chrome',
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: "/usr/bin/chromium", // Use system-installed Chromium
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-gpu",
+            "--disable-dev-shm-usage",
+        ],
     });
 };
 

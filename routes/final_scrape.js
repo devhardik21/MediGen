@@ -3,12 +3,11 @@ import puppeteer from "puppeteer";
 const launchBrowser = async () => {
     return await puppeteer.launch({
         headless: "new",
-        executablePath: "/usr/bin/chromium", // Use system-installed Chromium
         args: [
-            "--no-sandbox",
-            "--disable-setuid-sandbox",
-            "--disable-gpu",
-            "--disable-dev-shm-usage",
+            "--no-sandbox", // (Optional, mostly needed for Linux)
+            "--disable-setuid-sandbox", // (Optional, mostly needed for Linux)
+            "--disable-gpu", // (Helps in some cases)
+            "--disable-dev-shm-usage", // (Helps in Docker/Linux)
         ],
     });
 };

@@ -1,0 +1,35 @@
+# Exported from Render on 2025-04-03T19:03:47Z
+services:
+- type: web
+  name: MediGen
+  runtime: Docker
+  repo: https://github.com/devhardik21/MediGen
+  plan: free
+  envVars:
+  - key: PUPPETEER_EXECUTABLE_PATH
+    sync: false
+  - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+    sync: false
+  - key: CHROME_BIN
+    sync: false
+  - key: REFRESH_TOKEN_EXPIRY
+    sync: false
+  - key: ACCESS_TOKEN_EXPIRY
+    sync: false
+  - key: REFRESH_TOKEN_SECRET
+    sync: false
+  - key: ACCESS_TOKEN_SECRET
+    sync: false
+  - key: MONGO_URI
+    sync: false
+  - key: OPEN_AI_KEY
+    sync: false
+  - key: GEMINI_API_KEY
+    sync: false
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node server.js
+  healthCheckPath: /
+version: "1"

@@ -25,7 +25,8 @@ app.use(cors({
       "https://medi-gen-2tnn-git-master-hardiks-projects-8b7844aa.vercel.app",
       "https://medi-gen-2tnn-qzmrcsl1y-hardiks-projects-8b7844aa.vercel.app",
       "https://medigen.netlify.app",
-      "https://localhost:8000"
+      "https://localhost:8000",
+      "https://medigen21.vercel.app"
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],

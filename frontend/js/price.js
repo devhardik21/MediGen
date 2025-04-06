@@ -1,4 +1,4 @@
-const BASE_URL = 'https://medigen-final.onrender.com/api'
+const BASE_URL = 'https://localhost:8000/api'
 const form = document.querySelector('#price-comparison');
 const priceDisplay = document.querySelector('#price-display');
 
